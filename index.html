@@ -86,10 +86,11 @@ Outside of coding, I love exploring new tech trends, playing cricket, and readin
       <span class="close" onclick="closeModal('contactModal')"></span>
       <h2>Contact Me</h2>
       <form id="contactForm" name="submit-to-google-sheet">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Message" required></textarea>
-        <button type="submit">Send</button>
+        <input id="name" type="text" name="name" placeholder="Your Name" required>
+        <input id="email" type="email" name="email" placeholder="Your Email" required>
+        <textarea id="message" name="message" placeholder="Message" required></textarea>
+        <button id="send" type="submit">Send</button>
+        
       </form>
       <span id="msg"></span>
     </div>
@@ -123,7 +124,7 @@ Outside of coding, I love exploring new tech trends, playing cricket, and readin
   <footer>
     <p>&copy; 2025 My Portfolio. All Rights Reserved.</p>
   </footer>
-
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="script.js"></script>
 </body>
 </html>

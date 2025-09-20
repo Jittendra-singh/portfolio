@@ -43,32 +43,22 @@ document.querySelectorAll(".accordion-header").forEach(btn => {
       btn.nextElementSibling.style.display === "block" ? "none" : "block";
   });
 });
+// form validation
+const username = document.querySelector("#name");
+const email= document.querySelector("#email");
+const massage=document.querySelector("#message");
+const send= document.querySelector("#send");
+send.addEventListener("click",e=>
+    {
+        e.preventDefault();
+        
+        console.log("form submitted!");
+        const url="https://docs.google.com/forms/d/e/1FAIpQLSd_uDrVLFIOtd3sJwOsk492uBBKCuqCOlgfnRGQDYrYe_e81A/formResponse?"
+          var form_data= new FormData();
+          form_data.append(`entry.2120387921`,username.value)
+          form_data.append(`entry.2099853540`,email.value)
+          form_data.append(`ntry.159829181`,massage.value)
+        
+    })
+   
 
-    // Form Validation
-    function validateForm(){
-      let valid=true;
-      const name=document.getElementById('name').value.trim();
-      const email=document.getElementById('email').value.trim();
-      const message=document.getElementById('message').value.trim();
-
-      document.getElementById('nameError').textContent="";
-      document.getElementById('emailError').textContent="";
-      document.getElementById('messageError').textContent="";
-
-      if(name.length<3){
-        document.getElementById('nameError').textContent="Name must be at least 3 characters.";
-        valid=false;
-      }
-      const emailRegex=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if(!emailRegex.test(email)){
-        document.getElementById('emailError').textContent="Enter a valid email.";
-        valid=false;
-      }
-      if(message.length<10){
-        document.getElementById('messageError').textContent="Message must be at least 10 characters.";
-        valid=false;
-      }
-
-      return valid;
-
-    }
